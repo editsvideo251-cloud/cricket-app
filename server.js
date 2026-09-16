@@ -40,7 +40,7 @@ app.get("/api/matches", async (req, res) => {
             return res.status(response.status).json(data);
         }
 
-        const matches = (data.data || []).map(match => ({
+       const matches = (data.data || []).filter(match => String(match.type || "").toUpperCase().includes("T20")).map(match => ({
             id: match.id,
             date: match.starting_at,
             status: match.status,

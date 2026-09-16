@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cricket Live</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>🏏 Cricket Live</h1>
+        <p>Live Scores & Matches</p>
+    </header>
+
+    <main>
+
+        <div class="top">
+            <h2>Today's Matches</h2>
+
+            <button onclick="loadMatches()">
+                🔄
+            </button>
+        </div>
+
+        <div class="filters">
+
+    <button onclick="filterMatches('all')">
+        All
+    </button>
+
+    <button onclick="filterMatches('live')">
+        🔴 Live
+    </button>
+
+    <button onclick="filterMatches('upcoming')">
+        🕒 Upcoming
+    </button>
+
+    <button onclick="filterMatches('finished')">
+        ✓ Finished
+    </button>
+
+</div>
+
+<div id="matches">
+    Loading matches...
+</div>
+           
+       
+
+    </main>
+
+    <script src="app.js?v=2"></script>
+
+</body>
+</html>
